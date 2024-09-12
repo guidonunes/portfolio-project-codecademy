@@ -142,4 +142,15 @@
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
   }
+
+  .entries-list {
+    flex-direction: column; /* Stack cards vertically on small screens */
+    padding: 0; /* Remove padding to maximize space */
+  }
+
+  .entries-list li {
+    flex: 1 1 100%; /* Make cards take full width */
+    max-width: 100%; /* Ensure cards do not exceed full width */
+    margin: 0.5rem 0; /* Adjust margin for vertical stacking */
+  }
 }
