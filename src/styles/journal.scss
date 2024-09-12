@@ -1,0 +1,145 @@
+/* Journal.scss */
+.surface {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 45vh; /* Full viewport height */
+  padding: 4px;
+  width: 60%;
+  margin: 32px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  background-color: #bd7878; /* Light background color */
+}
+
+  .surface-header {
+    margin-bottom: 42px;
+    font-size: 48px;
+    color: #333;
+  }
+
+  .journal-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .entries-list {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 16px;
+    margin: 0 auto;
+    width: 90%;
+    overflow-y: auto;
+  }
+
+  .entries-list li {
+    position: relative; /* Position relative to place action buttons correctly */
+    display: flex;
+    flex-direction: column; /* Ensure the content and actions are stacked vertically */
+    margin: 0.5rem;
+    padding: 28px 0 28px 0;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    color: #0f0e0e;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    flex: 1 1 calc(25% - 1rem);
+    max-width: calc(20% - 1rem);
+    box-sizing: border-box;
+  }
+
+  .entry-actions-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    margin: -36px; /* Hide by default */
+    transition: opacity 0.3s ease;
+    padding: 0.5rem; /* Optional: Add some padding */
+  }
+
+  .entries-list li:hover .entry-actions-container {
+    opacity: 1;
+  }
+
+  .delete, .done {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    width: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    color: #fff;
+  }
+
+  .delete {
+    background-color: #f44336;
+  }
+
+  .done {
+    background-color: #4caf50;
+  }
+
+  /* Add specific styles for entry-done state */
+.entry-done {
+  text-decoration: line-through;
+}
+
+/* Dynamic color classes */
+.red {
+  background-color: #e57373;
+}
+
+.blue {
+  background-color: #64b5f6;
+}
+
+.green {
+  background-color: #81c784;
+}
+
+.yellow {
+  background-color: #fff176;
+}
+
+.purple {
+  background-color: #ba68c8;
+}
+
+@media (max-width: 1268px) {
+  .surface {
+    padding: 44px;
+    width: 70%;
+    margin: 16px auto;
+  }
+
+  .surface-header {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .surface {
+    padding: 54px;
+    width: 95%;
+    margin: 8px auto;
+  }
+
+  .surface-header {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+}
