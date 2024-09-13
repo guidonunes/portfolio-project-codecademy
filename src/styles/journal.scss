@@ -258,19 +258,30 @@
   .entries-list {
     flex-direction: column; /* Stack cards vertically */
     flex-wrap: nowrap;
-    height: 100%;
     padding: 12px; /* Remove padding to maximize space */
     overflow-y: auto; /* Enable vertical scrolling */
-    width: 70%; /* Ensure the list takes full width */
+    width: 80%; /* Ensure the list takes full width */
     max-height: 50vh; /* Adjust height to fit within viewport */
   }
 
   .entries-list li {
-    width: 75%; /* Ensure cards take full width of the container */
-    margin: 4px auto; /* Adjust margin for vertical stacking */
-    height: 100px; /* Fixed height for uniform card size */
+    width: 100%; /* Ensure cards take full width of the container */
+    margin: 4px 0; /* Adjust margin for vertical stacking */
+    height: 80px; /* Fixed height for uniform card size */
     max-width: 100%;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  }
+
+  /* Ensure single card doesn't occupy full column height */
+  .entries-list li {
+    min-height: 100px; /* Minimum height to avoid shrinking */
+  }
+
+  .entries-list li:only-child {
+    flex: 1 0 auto; /* Allow card to grow if it's the only item */
+    max-height: none; /* Remove max-height to avoid occupying full column height */
+    margin: 0; /* Remove margin to avoid extra spacing */
   }
 }
