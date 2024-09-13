@@ -6,19 +6,14 @@ import '../../../styles/journal.scss'; // Adjust the relative path as necessary
 
 const JournalEntries = () => {
   const { entries } = useSelector((state) => state.journal);
-  const COLORS = ['red', 'blue', 'green', 'yellow', 'purple'];
-
-  const getEntryColor = (index) => {
-    return COLORS[index % COLORS.length];
-  }
 
   return (
     <div className="surface">
       <ul className="entries-list">
-        {entries.map(({ text, isDone }, index) => (
+        {entries.map(({ text, isDone, color }, index) => (
           <li
             key={text}
-            className={`${getEntryColor(index)} surface-styles ${
+            className={`${color} surface-styles ${
               isDone ? "entry-done" : ""
             }`}
           >
