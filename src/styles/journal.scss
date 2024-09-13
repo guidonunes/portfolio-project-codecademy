@@ -256,32 +256,32 @@
   }
 
   .entries-list {
-    flex-direction: column; /* Stack cards vertically */
+    flex-direction: column;
     flex-wrap: nowrap;
-    padding: 12px; /* Remove padding to maximize space */
-    overflow-y: auto; /* Enable vertical scrolling */
-    width: 80%; /* Ensure the list takes full width */
-    max-height: 50vh; /* Adjust height to fit within viewport */
+    padding: 12px;
+    overflow-y: auto;
+    width: 80%;
+    max-height: 50vh;
   }
 
   .entries-list li {
-    width: 100%; /* Ensure cards take full width of the container */
-    margin: 4px 0; /* Adjust margin for vertical stacking */
-    height: 80px; /* Fixed height for uniform card size */
+    width: 100%;
+    margin: 4px 0;
+    height: 80px;
     max-width: 100%;
     text-align: center;
     font-size: 20px;
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    box-sizing: border-box;
   }
 
   /* Ensure single card doesn't occupy full column height */
   .entries-list li {
-    min-height: 100px; /* Minimum height to avoid shrinking */
+    min-height: 100px;
   }
 
   .entries-list li:only-child {
-    flex: 1 0 auto; /* Allow card to grow if it's the only item */
-    max-height: none; /* Remove max-height to avoid occupying full column height */
-    margin: 0; /* Remove margin to avoid extra spacing */
+    flex: 1 0 auto;
+    max-height: none;
+    margin: 0;
   }
 }
