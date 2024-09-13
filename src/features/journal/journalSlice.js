@@ -34,7 +34,10 @@ const getRandomColor = () => {
 export const journalSlice = createSlice({
   name: 'journal',
   initialState: {
-    entries: [],
+    entries: [
+      { text: 'Code Hard', isDone: false, color: getRandomColor() },
+      { text: 'Make Coffee', isDone: false, color: getRandomColor() }
+    ],
      doneEntries: []
     },
     reducers: {
