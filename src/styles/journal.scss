@@ -131,9 +131,9 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .surface {
-    padding: 54px;
+    padding: 48px;
     width: 95%;
     margin: 8px auto;
   }
@@ -144,13 +144,20 @@
   }
 
   .entries-list {
-    flex-direction: column; /* Stack cards vertically on small screens */
-    padding: 0; /* Remove padding to maximize space */
+    flex-direction: column; /* Stack cards vertically */
+    flex-wrap: nowrap;
+    height: 100%;
+    padding: 12px; /* Remove padding to maximize space */
+    overflow-y: auto; /* Enable vertical scrolling */
+    width: 70%; /* Ensure the list takes full width */
+    max-height: 50vh; /* Adjust height to fit within viewport */
   }
 
   .entries-list li {
-    flex: 1 1 100%; /* Make cards take full width */
-    max-width: 100%; /* Ensure cards do not exceed full width */
-    margin: 0.5rem 0; /* Adjust margin for vertical stacking */
+    width: 75%; /* Ensure cards take full width of the container */
+    margin: 4px auto; /* Adjust margin for vertical stacking */
+    height: 100px; /* Fixed height for uniform card size */
+    max-width: 100%;
+    padding: 4px;/* Ensure no extra width is applied */
   }
 }
