@@ -12,17 +12,17 @@ const COLORS = [
   'vibrant-teal',
   'vibrant-cyan',
   'vibrant-lime',
-  'vibrant-magenta', // New color
-  'vibrant-indigo', // New color
-  'vibrant-turquoise', // New color
-  'vibrant-maroon', // New color
-  'vibrant-olive', // New color
-  'vibrant-silver', // New color
-  'vibrant-gold', // New color
-  'vibrant-brown', // New color
-  'vibrant-aqua', // New color
-  'vibrant-rose', // New color
-  'vibrant-charcoal' // New color
+  'vibrant-magenta',
+  'vibrant-indigo',
+  'vibrant-turquoise',
+  'vibrant-maroon',
+  'vibrant-olive',
+  'vibrant-silver',
+  'vibrant-gold',
+  'vibrant-brown',
+  'vibrant-aqua',
+  'vibrant-rose',
+  'vibrant-charcoal'
 ];
 
 const getRandomColor = () => {
@@ -39,15 +39,15 @@ export const journalSlice = createSlice({
     },
     reducers: {
       addEntry: (state, action) => {
-        state.entries.push({ text: action.payload, isDone: false, color: getRandomColor()});
+        state.entries.push({ text: action.payload, isDone: false, color: getRandomColor() });
       },
       removeEntry: (state, action) => {
-        state.entries = state.entries.filter((entry, index) => index !== action.payload)
+        state.entries.splice(action.payload, 1);
       },
       toggleDone: (state, action) => {
-        state.entries[action.payload].isDone = !state.entries[action.payload].isDone;
+        state.entries[action.payload].isDone = !state.entries[action.payload]
+          .isDone;
       }
-
     }
   });
 

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { removeEntry, toggleDone } from '../journalSlice';
 import Confetti from 'react-dom-confetti';
 
-const JournalEntry = ({children, index, isDone }) => {
+const JournalEntry = ({children, id, isDone }) => {
   const dispatch = useDispatch();
 
   return (
@@ -12,14 +12,14 @@ const JournalEntry = ({children, index, isDone }) => {
         <button
           arial-label="Delete"
           className="delete"
-          onClick={() => dispatch(removeEntry(index))}
+          onClick={() => dispatch(removeEntry(id))}
         >
-          Delete
+          Remove
         </button>
         <button
         aria-label="Mark done"
         className="done"
-        onClick={() => dispatch(toggleDone(index))}
+        onClick={() => dispatch(toggleDone(id))}
         >
           {isDone ? 'Undo' : 'Done'}
           <Confetti active={isDone} config={{ spread: 360 }}/>
