@@ -22,9 +22,27 @@
   .journal-input {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: none;
+    border-bottom: 2px solid #333;
+    border-radius: 0;
+    background-color: transparent;
+    font-size: 24px;
+    color: #333;
+    outline: none;
+    margin-bottom: 16px;
+    text-align: center;
   }
+
+  .journal-input::placeholder {
+    color: #0a0a0a;
+    font-style: italic;
+    opacity: 0.3;
+  }
+
+  // .journal-input:focus {
+  //   border-bottom-color: #bd7878;
+  //   transition: border-bottom-color 0.3s ease;
+  // }
 
   .entries-list {
     display:flex;
@@ -47,7 +65,7 @@
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     color: #0f0e0e;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     transition: background-color 0.3s ease;
     flex: 1 1 calc(25% - 1rem);
@@ -131,7 +149,7 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 780px) {
   .surface {
     padding: 48px;
     width: 95%;
@@ -139,8 +157,10 @@
   }
 
   .surface-header {
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
+    margin: 16px auto;
+    font-size: 32px;
+    padding: 24px;
+    text-align: center;
   }
 
   .entries-list {
@@ -158,6 +178,6 @@
     margin: 4px auto; /* Adjust margin for vertical stacking */
     height: 100px; /* Fixed height for uniform card size */
     max-width: 100%;
-    padding: 4px;/* Ensure no extra width is applied */
+    text-align: center;
   }
 }

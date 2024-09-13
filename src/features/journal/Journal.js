@@ -27,6 +27,7 @@ const Journal = () => {
           <input
             type="text"
             className = "journal-input"
+            placeholder='Write something...'
             value = {newEntry}
             onChange={(e) => {
               setNewEntry(e.target.value);
