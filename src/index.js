@@ -4,7 +4,10 @@ import "./index.css";
 import App from "./App";
 import store from "./app/store";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/journal.scss';
+import './styles/Journal.scss';
+import './styles/Button.scss';
+import './styles/Colors.scss';
+
 import { Provider } from "react-redux";
 
 

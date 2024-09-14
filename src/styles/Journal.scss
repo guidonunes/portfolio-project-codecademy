@@ -90,137 +90,14 @@
     opacity: 1;
   }
 
-  .delete, .done {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 0.875rem;
-    padding: 0.5rem;
-    width: 60px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    color: #fff;
-  }
 
-  .delete {
-    background-color: #f44336;
-  }
-
-  .done {
-    background-color: #4caf50;
-  }
 
   /* Add specific styles for entry-done state */
 .entry-done {
   text-decoration: line-through;
 }
 
-/* Dynamic color classes */
-/* Dynamic vibrant color classes */
-.vibrant-red {
-  background-color: #ff1744; /* Bright Red */
-  color: #fff; /* White text for contrast */
-}
 
-.vibrant-blue {
-  background-color: #2979ff; /* Bright Blue */
-  color: #fff; /* White text for contrast */
-}
-
-.vibrant-green {
-  background-color: #00e676; /* Bright Green */
-  color: #000; /* Black text for contrast */
-}
-
-.vibrant-yellow {
-  background-color: #ffea00; /* Bright Yellow */
-  color: #000; /* Black text for contrast */
-}
-
-.vibrant-purple {
-  background-color: #d500f9; /* Bright Purple */
-  color: #fff; /* White text for contrast */
-}
-
-.vibrant-orange {
-  background-color: #ff9100; /* Bright Orange */
-  color: #000; /* Black text for contrast */
-}
-
-.vibrant-pink {
-  background-color: #ff4081; /* Bright Pink */
-  color: #fff; /* White text for contrast */
-}
-
-.vibrant-teal {
-  background-color: #00bfa5; /* Bright Teal */
-  color: #000; /* Black text for contrast */
-}
-
-.vibrant-cyan {
-  background-color: #00e5ff; /* Bright Cyan */
-  color: #000; /* Black text for contrast */
-}
-
-.vibrant-lime {
-  background-color: #c6ff00; /* Bright Lime */
-  color: #000; /* Black text for contrast */
-}
-
-.vibrant-magenta {
-  background-color: #d81b60; /* Vibrant Magenta */
-  color: #fff; /* White text for contrast */
-}
-
-.vibrant-indigo {
-  background-color: #3f51b5; /* Vibrant Indigo */
-  color: #fff; /* White text for contrast */
-}
-
-.vibrant-turquoise {
-  background-color: #1de9b6; /* Vibrant Turquoise */
-  color: #000; /* Black text for contrast */
-}
-
-.vibrant-maroon {
-  background-color: #d32f2f; /* Vibrant Maroon */
-  color: #fff; /* White text for contrast */
-}
-
-.vibrant-olive {
-  background-color: #9e9d24; /* Vibrant Olive */
-  color: #fff; /* White text for contrast */
-}
-
-.vibrant-silver {
-  background-color: #c0c0c0; /* Vibrant Silver */
-  color: #000; /* Black text for contrast */
-}
-
-.vibrant-gold {
-  background-color: #ffd700; /* Vibrant Gold */
-  color: #000; /* Black text for contrast */
-}
-
-.vibrant-brown {
-  background-color: #6d4c41; /* Vibrant Brown */
-  color: #fff; /* White text for contrast */
-}
-
-.vibrant-aqua {
-  background-color: #00bcd4; /* Vibrant Aqua */
-  color: #000; /* Black text for contrast */
-}
-
-.vibrant-rose {
-  background-color: #f06292; /* Vibrant Rose */
-  color: #fff; /* White text for contrast */
-}
-
-.vibrant-charcoal {
-  background-color: #333; /* Vibrant Charcoal */
-  color: #fff; /* White text for contrast */
-}
 
 
 @media (max-width: 1268px) {

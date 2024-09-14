@@ -27,14 +27,17 @@ const Journal = () => {
           <input
             type="text"
             className = "journal-input"
-            placeholder='Type a word...'
-            maxLength="10"
+            placeholder='Type a something...'
+            maxLength="14"
             value = {newEntry}
             onChange={(e) => {
               setNewEntry(e.target.value);
             }}
             aria-label="Journal entry"
           />
+          <button type="submit" className="btn btn-primary btn-add">
+            Add Entry
+          </button>
         </form>
       </div>
       <JournalEntries />

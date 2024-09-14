@@ -1,8 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import JournalEntry from './JournalEntry';
-import '../../../styles/journal.scss'; // Adjust the relative path as necessary
-
+import '../../../styles/Journal.scss';
 
 const JournalEntries = () => {
   const { entries } = useSelector((state) => state.journal);
