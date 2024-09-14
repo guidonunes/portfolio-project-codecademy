@@ -1,6 +1,10 @@
 .btn-add {
-  margin: 0 auto;
-  padding: 12px;
+  display: block;  /* Ensures it's a block-level element */
+  margin: 12px auto;  /* Centers horizontally */
+  font-size: 24px;   /* Define a width to apply margin auto */
+  text-align: center;
+  background-color: black;
+  border-radius: 50%; /* Ensures text inside is centered */
 }
 
 .delete, .done {

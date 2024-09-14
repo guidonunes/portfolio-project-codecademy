@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import JournalEntries from './components/JournalEntries';
 import { addEntry } from './journalSlice';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleCheck } from '@fortawesome/free-regular-svg-icons';
 
 const Journal = () => {
   const [newEntry, setNewEntry] = useState('');
@@ -36,7 +38,7 @@ const Journal = () => {
             aria-label="Journal entry"
           />
           <button type="submit" className="btn btn-primary btn-add">
-            Add Entry
+             <FontAwesomeIcon icon={faCircleCheck} />
           </button>
         </form>
       </div>

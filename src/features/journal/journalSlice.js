@@ -2,27 +2,14 @@ import { createSlice } from '@reduxjs/toolkit';
 
 
 const COLORS = [
-  'vibrant-red',
-  'vibrant-blue',
-  'vibrant-green',
-  'vibrant-yellow',
-  'vibrant-purple',
-  'vibrant-orange',
-  'vibrant-pink',
-  'vibrant-teal',
-  'vibrant-cyan',
-  'vibrant-lime',
-  'vibrant-magenta',
-  'vibrant-indigo',
-  'vibrant-turquoise',
-  'vibrant-maroon',
-  'vibrant-olive',
-  'vibrant-silver',
-  'vibrant-gold',
-  'vibrant-brown',
-  'vibrant-aqua',
-  'vibrant-rose',
-  'vibrant-charcoal'
+  'pastel-red',
+  'pastel-blue',
+  'pastel-green',
+  'pastel-yellow',
+  'pastel-purple',
+  'pastel-orange',
+  'pastel-pink',
+  'pastel-teal'
 ];
 
 const getRandomColor = () => {
