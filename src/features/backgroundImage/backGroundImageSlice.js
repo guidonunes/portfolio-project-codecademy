@@ -2,4 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import unsplashApi from "../../api/unsplash";
 
 
-//implement logicnp
+export const getBackgroundImage = createAsyncThunk(
+  "backgroundImage/getImage",
+  unsplashApi.getImage
+);
