@@ -1,7 +1,6 @@
 
 /* Left and Right wallpaper control */
-.left-wallpaper-control,
-.right-wallpaper-control {
+.wallpaper-control {
   position: fixed;
   top: 50%;
   font-size: 24px;
@@ -9,8 +8,8 @@
   z-index: 999;
   pointer-events: auto;
   background-color: transparent;
-  border: none;
-  color: white;
+  color: red;
+  border: none;;
   cursor: pointer;
   padding: 0;
   outline: none;
@@ -62,7 +61,7 @@ main {
   width: 100%;
   padding: 0.5rem;
   border: none;
-  border-bottom: 2px solid #F9FEFF;
+  border-bottom: 2px solid #888888;
   background-color: transparent;
   font-size: 24px;
   color: #F9FEFF;
@@ -80,7 +79,7 @@ main {
 .entries-list {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   list-style: none;
   padding: 32px;
   margin: 0 auto;

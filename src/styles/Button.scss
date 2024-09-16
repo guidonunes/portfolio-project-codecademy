@@ -4,10 +4,17 @@
   margin: 12px auto;  /* Centers horizontally */
   font-size: 24px;   /* Define a width to apply margin auto */
   text-align: center;
-  background-color: black;
-  border-radius: 50%; /* Ensures text inside is centered */
+  background-color: #333333;
+  color: #888888;
+  border-radius: 50%;
+  border: none;/* Ensures text inside is centered */
+
 }
 
+.btn-add:hover {
+  background-color: #444444;
+  color: #F9FEFF;
+}
 .delete, .done {
   background: transparent;
   border: none;
