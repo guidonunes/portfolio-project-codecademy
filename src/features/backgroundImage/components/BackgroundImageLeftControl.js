@@ -1,6 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { switchToPreviousBackgroundImage } from '../backgroundImageSlice';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 const BackgroundImageLeftControl = () => {
@@ -13,7 +15,7 @@ const BackgroundImageLeftControl = () => {
         dispatch(switchToPreviousBackgroundImage());
       }}
     >
-      {'<'}
+      <FontAwesomeIcon icon={faChevronLeft} />
     </button>
   );
 };

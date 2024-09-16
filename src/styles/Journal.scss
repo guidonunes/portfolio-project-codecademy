@@ -1,23 +1,33 @@
+
 /* Left and Right wallpaper control */
 .left-wallpaper-control,
 .right-wallpaper-control {
   position: fixed;
   top: 50%;
-  margin: 16px;
   font-size: 24px;
-  transform: translateY(-50%); /* Centers vertically */
-  z-index: 999; /* Ensure it's below the journal */
+  transform: translateY(-50%);
+  z-index: 999;
   pointer-events: auto;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
 }
 
 .left-wallpaper-control {
-  left: 0;
+  left: 0; /* Position on the left */
 }
 
 .right-wallpaper-control {
-  right: 0;
+  right: 0; /* Position on the right */
 }
 
+.left-wallpaper-control:hover,
+.right-wallpaper-control:hover {
+  color: #666666; /* Change arrow color on hover */
+}
 /* Main journal section */
 main {
   z-index: 2;
