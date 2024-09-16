@@ -3,9 +3,11 @@
 .right-wallpaper-control {
   position: fixed;
   top: 50%;
+  margin: 16px;
+  font-size: 24px;
   transform: translateY(-50%); /* Centers vertically */
   z-index: 999; /* Ensure it's below the journal */
-  pointer-events: auto; /* Enable interaction */
+  pointer-events: auto;
 }
 
 .left-wallpaper-control {
@@ -18,7 +20,7 @@
 
 /* Main journal section */
 main {
-  z-index: 2; /* Ensure the journal is on top */
+  z-index: 2;
   position: relative;
 }
 
