@@ -1,116 +1,125 @@
-/* Journal.scss */
-main {
-  z-index: 1;
+/* Left and Right wallpaper control */
+.left-wallpaper-control,
+.right-wallpaper-control {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%); /* Centers vertically */
+  z-index: 999; /* Ensure it's below the journal */
+  pointer-events: auto; /* Enable interaction */
 }
 
+.left-wallpaper-control {
+  left: 0;
+}
+
+.right-wallpaper-control {
+  right: 0;
+}
+
+/* Main journal section */
+main {
+  z-index: 2; /* Ensure the journal is on top */
+  position: relative;
+}
+
+/* Container for the entire surface */
 .surface {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 45vh; /* Full viewport height */
+  height: 45vh;
   padding: 4px;
   width: 60%;
   margin: 32px auto;
   border-radius: 12px;
-  opacity: 0.8;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-  background-color:#333333; /* Light background color */
+  opacity: 0.9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: #333333;
+  z-index: 2; /* Ensure surface stays above the controls */
 }
 
-  .surface-header {
-    margin-bottom: 42px;
-    font-size: 48px;
-    color: #F9FEFF;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  }
+.surface-header {
+  margin-bottom: 42px;
+  font-size: 48px;
+  color: #F9FEFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
 
-  .journal-input {
-    width: 100%;
-    padding: 0.5rem;
-    border: none;
-    border-bottom: 2px solid #F9FEFF;
-    border-radius: 0;
-    background-color: transparent;
-    font-size: 24px;
-    color: #F9FEFF;
-    outline: none;
-    margin-bottom: 16px;
-    text-align: center;
-  }
+.journal-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 2px solid #F9FEFF;
+  background-color: transparent;
+  font-size: 24px;
+  color: #F9FEFF;
+  outline: none;
+  margin-bottom: 16px;
+  text-align: center;
+}
 
-  .journal-input::placeholder {
-    color: #F9FEFF;
-    font-style: italic;
-    opacity: 0.5;
-  }
+.journal-input::placeholder {
+  color: #F9FEFF;
+  font-style: italic;
+  opacity: 0.5;
+}
 
-  // .journal-input:focus {
-  //   border-bottom-color: #bd7878;
-  //   transition: border-bottom-color 0.3s ease;
-  // }
+.entries-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 32px;
+  margin: 0 auto;
+  width: 90%;
+  overflow-y: auto;
+  z-index: 2; /* Keep the entries above controls */
+}
 
-  .entries-list {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 32px;
-    margin: 0 auto;
-    width: 90%;
-    overflow-y: auto;
-  }
+.entries-list li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  padding: 28px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  font-size: 24px;
+  border: 2px solid #F9FEFF;
+  font-weight: bold;
+  opacity: 0.9;
+  transition: background-color 0.3s ease;
+  flex: 1 1 calc(25% - 1rem);
+  max-width: calc(25% - 1rem);
+  box-sizing: border-box;
+}
 
-  .entries-list li {
-    position: relative; /* Position relative to place action buttons correctly */
-    display: flex;
-    flex-direction: column; /* Ensure the content and actions are stacked vertically */
-    margin: 0.5rem;
-    padding: 28px 0 28px 0;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    color: #0f0e0e;
-    font-size: 24px;
-    border: 2px solid #F9FEFF;
-    font-weight: bold;
-    opacity: 0.9;
-    transition: background-color 0.3s ease;
-    flex: 1 1 calc(25% - 1rem);
-    max-width: calc(25% - 1rem);
-    box-sizing: border-box;
-  }
+.entry-actions-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  opacity: 0;
+  margin: -36px; /* Hidden by default */
+  transition: opacity 0.3s ease;
+  padding: 0.5rem;
+}
 
-  .entry-actions-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-around;
-    opacity: 0;
-    margin: -36px; /* Hide by default */
-    transition: opacity 0.3s ease;
-    padding: 0.5rem; /* Optional: Add some padding */
-  }
-
-  .entries-list li:hover .entry-actions-container {
-    opacity: 1;
-  }
-
-  /* Add specific styles for entry-done state */
-.entry-done {
-  text-decoration: line-through;
+.entries-list li:hover .entry-actions-container {
+  opacity: 1;
 }
 
 form {
   display: flex;
-  justify-content: center;  /* Centers items horizontally */
-  align-items: center;      /* Centers items vertically if needed */
+  justify-content: center;
+  align-items: center;
 }
 
-
-
+/* Responsive adjustments for small screens */
 @media (max-width: 1268px) {
   .surface {
     padding: 44px;
@@ -145,7 +154,6 @@ form {
 
   .entries-list {
     flex-direction: column;
-    flex-wrap: nowrap;
     padding: 12px;
     overflow-y: auto;
     width: 80%;
@@ -157,19 +165,6 @@ form {
     margin: 4px 0;
     height: 80px;
     max-width: 100%;
-    text-align: center;
     font-size: 20px;
-    box-sizing: border-box;
-  }
-
-  /* Ensure single card doesn't occupy full column height */
-  .entries-list li {
-    min-height: 100px;
-  }
-
-  .entries-list li:only-child {
-    flex: 1 0 auto;
-    max-height: none;
-    margin: 0;
   }
 }
