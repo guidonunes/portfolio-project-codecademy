@@ -1,4 +1,8 @@
 /* Journal.scss */
+main {
+  z-index: 1;
+}
+
 .surface {
   display: flex;
   flex-direction: column;
@@ -9,9 +13,9 @@
   width: 60%;
   margin: 32px auto;
   border-radius: 12px;
-  opacity: 0.7;
+  opacity: 0.8;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-  background-color:#555555; /* Light background color */
+  background-color:#333333; /* Light background color */
 }
 
   .surface-header {
@@ -25,7 +29,7 @@
     width: 100%;
     padding: 0.5rem;
     border: none;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #F9FEFF;
     border-radius: 0;
     background-color: transparent;
     font-size: 24px;
@@ -36,7 +40,7 @@
   }
 
   .journal-input::placeholder {
-    color: #0a0a0a;
+    color: #F9FEFF;
     font-style: italic;
     opacity: 0.5;
   }

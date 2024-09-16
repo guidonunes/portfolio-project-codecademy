@@ -26,11 +26,16 @@ export const backgroundImageSlice = createSlice({
     }
   },
   extraReducers: (builder) => {
-    builder.addCase(getBackgroundImage.fulfilled, (state, action) => {
-      state.imageUrls = action.payload;
-      state.currentImageUrlIndex = 0;
-    });
+    builder
+      .addCase(getBackgroundImage.fulfilled, (state, action) => {
+        state.imageUrls = action.payload;
+        state.currentImageUrlIndex = 0;
+      })
+      .addCase(getBackgroundImage.rejected, (state, action) => {
+        console.error('Failed to fetch images:', action.error.message);
+      });
   },
+
 
 });
 

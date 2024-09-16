@@ -1,0 +1,22 @@
+.App {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;  /* Full viewport width */
+  overflow: hidden;
+}
+
+/* Background Image container */
+#background-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1; /* Ensure the background is behind the rest of the content */
+}
+
+#background-image-container img {
+  object-fit: cover; /* Cover the full container without distortion */
+  height: 100%;
+  width: 100%;
+}
