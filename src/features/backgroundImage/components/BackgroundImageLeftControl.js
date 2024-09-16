@@ -14,6 +14,7 @@ const BackgroundImageLeftControl = () => {
       onClick={() => {
         dispatch(switchToPreviousBackgroundImage());
       }}
+      className='left-wallpaper-control'
     >
       <FontAwesomeIcon icon={faChevronLeft} />
     </button>

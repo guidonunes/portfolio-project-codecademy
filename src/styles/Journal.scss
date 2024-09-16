@@ -1,17 +1,23 @@
 
 /* Left and Right wallpaper control */
-.wallpaper-control {
+.right-wallpaper-control,
+.left-wallpaper-control {
   position: fixed;
   top: 50%;
   font-size: 24px;
   transform: translateY(-50%);
   z-index: 999;
   pointer-events: auto;
-  background-color: transparent;
-  color: red;
+  background-color: #333333;
+  color: #F9FEFF !important;
+  margin: 8px;
+  font-weight: bold;
+  font-size: 36px;
   border: none;;
   cursor: pointer;
-  padding: 0;
+  padding: 4px;
+  border-radius: 12px;
+  opacity: 0.9;
   outline: none;
 }
 
@@ -122,6 +128,12 @@ main {
 
 .entries-list li:hover .entry-actions-container {
   opacity: 1;
+}
+
+.entries-list li.entry-done {
+  background-color: #333333;
+  color: #666666;
+  opacity: 0.6;
 }
 
 form {

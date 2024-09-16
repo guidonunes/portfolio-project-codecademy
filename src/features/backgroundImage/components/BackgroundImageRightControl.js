@@ -15,6 +15,7 @@ const BackgroundImageRightControl = () => {
       onClick={() => {
         dispatch(switchToNextBackgroundImage());
       }}
+      className="right-wallpaper-control"
     >
       <FontAwesomeIcon icon={faChevronRight} />
     </button>
