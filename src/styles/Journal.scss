@@ -5,11 +5,12 @@
   position: fixed;
   top: 50%;
   font-size: 24px;
-  transform: translateY(-50%);
+  transform: translateY(-60%);
   z-index: 999;
   pointer-events: auto;
   background-color: #333333;
   color: #F9FEFF !important;
+  opacity: 0.9;
   margin: 8px;
   font-weight: bold;
   font-size: 36px;
