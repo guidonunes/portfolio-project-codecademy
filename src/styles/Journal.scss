@@ -55,7 +55,7 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
-    padding: 16px;
+    padding: 32px;
     margin: 0 auto;
     width: 90%;
     overflow-y: auto;
@@ -69,14 +69,15 @@ main {
     padding: 28px 0 28px 0;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     color: #0f0e0e;
     font-size: 24px;
+    border: 2px solid #F9FEFF;
     font-weight: bold;
     opacity: 0.9;
     transition: background-color 0.3s ease;
     flex: 1 1 calc(25% - 1rem);
-    max-width: calc(20% - 1rem);
+    max-width: calc(25% - 1rem);
     box-sizing: border-box;
   }
 

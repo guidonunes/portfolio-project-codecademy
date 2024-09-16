@@ -30,7 +30,7 @@ const Journal = () => {
             type="text"
             className = "journal-input"
             placeholder='Type something...'
-            maxLength="14"
+            maxLength="15"
             value = {newEntry}
             onChange={(e) => {
               setNewEntry(e.target.value);
