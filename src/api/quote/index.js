@@ -1,7 +1,7 @@
 const API_URL_QUOTE = `https://api.api-ninjas.com/v1/quotes?category=inspirational`;
 const API_KEY = process.env.REACT_APP_QUOTE_API;
 
-console.log(API_URL_QUOTE);
+console.log(API_KEY);
 
 
 
