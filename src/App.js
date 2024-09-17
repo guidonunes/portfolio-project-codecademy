@@ -18,6 +18,9 @@ function App() {
         <aside className="right-wallpaper-control wallpaper-control">
           <BackgroundImageRightControl />
         </aside>
+        <footer>
+          <Quote />
+        </footer>
     </div>
   );
 }
