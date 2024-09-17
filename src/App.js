@@ -1,6 +1,7 @@
 import React from 'react';
 import Journal from './features/journal/Journal';
 import BackgroundImage from './features/backgroundImage/BackgroundImage';
+import Quote from './features/quote/Quote';
 import BackgroundImageLeftControl from './features/backgroundImage/components/BackgroundImageLeftControl';
 import BackgroundImageRightControl from './features/backgroundImage/components/BackgroundImageRightControl';
 

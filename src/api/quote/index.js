@@ -1,0 +1,23 @@
+const API_URL_QUOTE = `https://api.api-ninjas.com/v1/quotes?category=inspirational`;
+
+console.log(API_URL_QUOTE);
+
+export const getQuote = async () => {
+  console.log("Fetching quote from API...");
+  const response = await fetch(API_URL_QUOTE);
+  console.log("Response:", response);
+  const json = await response.json();
+  const quoteData = json[0];
+  console.log("Fetched data:", quoteData);
+  return {
+    quote: quoteData.quote,
+    author: quoteData.author
+  }
+};
+
+
+const quoteApi = {
+  getQuote
+};
+
+export default quoteApi;
