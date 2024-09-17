@@ -22,10 +22,10 @@ function App() {
 
       {controlsVisible && (
         <>
-          <aside className="left-wallpaper-control wallpaper-control">
+          <aside className=" wallpaper-control">
             <BackgroundImageLeftControl />
           </aside>
-          <aside className="right-wallpaper-control wallpaper-control">
+          <aside className="wallpaper-control">
             <BackgroundImageRightControl />
           </aside>
         </>
