@@ -19,7 +19,7 @@ const initialState = {
   lon: '',
   country: '',
   isLoading: false,
-  error: null, // Better error handling with a message
+  error: null, //
 };
 
 const weatherSlice = createSlice({

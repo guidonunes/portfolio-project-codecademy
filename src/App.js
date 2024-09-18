@@ -3,6 +3,7 @@ import Journal from './features/journal/Journal';
 import BackgroundImage from './features/backgroundImage/BackgroundImage';
 import BackgroundImageLeftControl from './features/backgroundImage/components/BackgroundImageLeftControl';
 import BackgroundImageRightControl from './features/backgroundImage/components/BackgroundImageRightControl';
+import Quote from './features/quote/Quote';
 
 function App() {
   const [controlsVisible, setControlsVisible] = useState(false);
@@ -33,6 +34,9 @@ function App() {
       <main>
         <Journal />
       </main>
+      <footer>
+        <Quote />
+      </footer>
     </div>
   );
 }

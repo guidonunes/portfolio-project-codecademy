@@ -45,6 +45,7 @@ const Journal = () => {
         </form>
       </div>
       <JournalEntries />
+
     </>
   );
 };
