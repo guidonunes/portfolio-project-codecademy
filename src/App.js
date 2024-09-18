@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Journal from './features/journal/Journal';
 import BackgroundImage from './features/backgroundImage/BackgroundImage';
-
+import Weather from "./features/weather/Weather";
 import BackgroundImageLeftControl from './features/backgroundImage/components/BackgroundImageLeftControl';
 import BackgroundImageRightControl from './features/backgroundImage/components/BackgroundImageRightControl';
 
@@ -19,6 +19,9 @@ function App() {
     <div className="App" onClick={handleScreenClick}>
 
       <BackgroundImage />
+      <header>
+      <Weather />
+      </header>
 
       {controlsVisible && (
         <>
