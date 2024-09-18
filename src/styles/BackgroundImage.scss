@@ -19,6 +19,6 @@
   object-fit: cover; /* Cover the full container without distortion */
   height: 100%;
   width: 100%;
-  // filter: blur(4px); /* Apply blur effect */
-  // -webkit-filter: blur(4px);
+  filter: blur(4px); /* Apply blur effect */
+  -webkit-filter: blur(4px);
 }

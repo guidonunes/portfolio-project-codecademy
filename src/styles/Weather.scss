@@ -1,13 +1,13 @@
 .weather-container {
-  position: relative;
-  top: 2px;
-  right: 16px;
+  position: absolute;
+  top: 8px;
+  right: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #333333; /* Semi-transparent background */
-  padding: 12px;
+  background-color: transparent; /* Semi-transparent background */
+  padding: 16px;
   border-radius: 8px;
   color: #F9FEFF;
   z-index: 3; /* Ensure weather stays above other elements */
@@ -51,6 +51,7 @@
 
 @media (max-width: 780px) {
   .weather-container {
+    position: relative;
     right: 0;
     top: 20px;
     padding: 8px;
