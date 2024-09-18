@@ -10,7 +10,7 @@ import './styles/Journal.scss';
 import './styles/Button.scss';
 import './styles/Colors.scss';
 import './styles/Weather.scss';
-
+import './styles/Footer.scss';
 import { Provider } from "react-redux";
 
 

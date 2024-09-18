@@ -37,7 +37,7 @@ export const Weather = () => {
           alt={description}
           className="weather-icon"
         />
-        <h1>{temp}&deg;C</h1>
+        <h2>{temp}&deg;C</h2>
       </div>
 
       <p className="weather-description">

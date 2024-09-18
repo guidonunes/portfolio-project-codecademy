@@ -15,7 +15,8 @@
 
 /* Styling for weather location text */
 .weather-location {
-  font-size: 14px;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   font-weight: bold;
   color: #F9FEFF;
   margin-bottom: 2px;
@@ -36,8 +37,8 @@
 }
 
 /* Temperature styling */
-.weather-details h1 {
-  font-size: 32px;
+.weather-details h2 {
+  font-size: 40px;
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }

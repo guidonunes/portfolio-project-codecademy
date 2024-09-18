@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons';
 import Weather from '../weather/Weather';
 
+
 const Journal = () => {
   const [newEntry, setNewEntry] = useState('');
   const dispatch = useDispatch();
@@ -45,7 +46,6 @@ const Journal = () => {
         </form>
       </div>
       <JournalEntries />
-
     </>
   );
 };

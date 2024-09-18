@@ -1,0 +1,43 @@
+Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically align */
+  position: fixed; /* Fixed to always stay at the bottom */
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  opacity: 0.9; /* Semi-transparent background */
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+
+}
+
+.quote-container {
+  max-width: 100%;
+  background-color: transparent;
+  color: #f9feff;
+}
+
+.quote {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.6;
+  color: #f9feff;
+  margin-bottom: 10px;
+}
+
+.quote-author {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f9feff;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .quote-container {
+    display: none;
+  }
+
+}
