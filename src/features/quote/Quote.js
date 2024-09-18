@@ -15,7 +15,7 @@ export const Quote = () => {
     <div className="quote-container">
         <blockquote className="quote">
           &ldquo;{quote}&rdquo; &mdash;{' '}
-          <footer className="quote-author">{author}</footer>
+          <div className="quote-author">{author}</div>
         </blockquote>
       </div>
     )
