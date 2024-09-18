@@ -1,37 +1,51 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getWeather } from "./weatherSlice";
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import {
+  selectLocation,
+  selectTemp,
+  selectDescription,
+  selectIcon,
+  fetchWeather,
+  getCoords,
+  selectLat,
+  selectLon,
+  selectCountry
+} from './weatherSlice'
 
-const Weather = () => {
-  const { metadata, temperature, city, state } = useSelector(
-    (state) => state.weather
-  );
-  const dispatch = useDispatch();
+export const Weather = () => {
+  const location = useSelector(selectLocation)
+  const country = useSelector(selectCountry)
+  const temp = Math.round(useSelector(selectTemp))
+  const description = useSelector(selectDescription)
+  const icon = useSelector(selectIcon)
+  const lat = useSelector(selectLat)
+  const lon = useSelector(selectLon)
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    if (city && state) {
-      dispatch(getWeather({ city, state }));
-    }
-  }, [dispatch, city, state]);
+    dispatch(getCoords())
+    dispatch(fetchWeather({lat, lon}))
 
-  if (!metadata || !metadata.icon) {
-    return <div>Loading...</div>; // Show loading state or some fallback UI
-  }
+  }, [dispatch, lat, lon])
 
   return (
-    <div className="weather">
-      <div className="temperature-container">
+    <div className="weather-container">
+      <h2 className="weather-location">{`${location}, ${country}`}</h2>
+      <div className="weather-details">
         <img
-          src={`http://openweathermap.org/img/wn/${metadata.icon}@2x.png`}
-          alt=""
+          src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+          alt={description}
+          className="weather-icon"
         />
-        <div className="weather-text">
-          <p className="temperature">{temperature}°</p>
-          <p className="weather-description">{metadata.description}</p>
-        </div>
+        <h1>{temp}&deg;C</h1>
       </div>
+
+      <p className="weather-description">
+        {description.charAt(0).toUpperCase() + description.slice(1)}
+      </p>
     </div>
-  );
-};
+  )
+}
+
 
 export default Weather;

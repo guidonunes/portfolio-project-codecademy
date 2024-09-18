@@ -4,6 +4,7 @@ import JournalEntries from './components/JournalEntries';
 import { addEntry } from './journalSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons';
+import Weather from '../weather/Weather';
 
 const Journal = () => {
   const [newEntry, setNewEntry] = useState('');
@@ -23,6 +24,7 @@ const Journal = () => {
   return (
     <>
       <div id="journal" className="surface">
+      <Weather/>
         <h2 className="surface-header">What's on your mind today?</h2>
 
         <form onSubmit={onFormSubmit}>
