@@ -18,7 +18,7 @@
   font-size: 14px;
   font-weight: bold;
   color: #F9FEFF;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   text-align: center;
 }
 
@@ -32,7 +32,7 @@
 .weather-icon {
   width: 50px;
   height: 50px;
-  margin-right: 8px;
+  margin-right: 2px;
 }
 
 /* Temperature styling */
@@ -47,4 +47,24 @@
   font-size: 14px;
   font-style: italic;
   color: #F9FEFF;
+}
+
+@media (max-width: 780px) {
+  .weather-container {
+    right: 0;
+    top: 20px;
+    padding: 8px;
+  }
+
+ .weather-details h1 {
+    font-size: 20px;
+  }
+
+  .weather-location {
+    font-size: 12px;
+  }
+
+  .weather-description {
+    font-size: 12px;
+  }
 }

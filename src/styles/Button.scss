@@ -35,3 +35,10 @@
 .done {
   background-color: #4caf50;
 }
+
+
+@media (max-width: 780px) {
+  .btn-add {
+    font-size: 24px;
+  }
+}
