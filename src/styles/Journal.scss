@@ -86,12 +86,12 @@ main {
 .entries-list {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  overflow-y: auto;
   list-style: none;
   padding: 28px;
   margin: 0 auto;
   width: 90%;
-  overflow-y: auto;
   z-index: 2; /* Keep the entries above controls */
 }
 
@@ -100,7 +100,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 0.5rem;
-  padding: 28px;
+  padding: 16px;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
@@ -110,7 +110,7 @@ main {
   opacity: 0.9;
   transition: background-color 0.3s ease;
   flex: 1 1 calc(25% - 1rem);
-  max-width: calc(25% - 1rem);
+  max-width: calc(35% - 1rem);
   box-sizing: border-box;
 }
 
